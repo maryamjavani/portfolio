@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,500,500i,600,700|Raleway:500,600,700');
+
+/*
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+body { 
+	font-size: 16px;
+	line-height: 20px;
+	color:  #282828;
+	font-family: 'Montserrat', sans-serif;
+	margin:  0;
+}
+
+h1, h2, h3 ,h4 ,h5 ,h6 {
+	font-family: 'Raleway', sans-serif;
+}
+
+a, a:hover {
+	text-decoration: none;
+}
+
+/*
+SASS Nesting
+
+header {
+	.top-header {
+		.left-side {
+			
+		}
+	}
+}
+*/
+
+header {
+
+}
+
+header .top-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 30px;
+	border-bottom:  1px solid #eee;
+}
+
+header .top-header .left-side {
+
+}
+
+header .top-header .left-side span {
+	font-size: 12px;
+	line-height: 16px;
+	color:  #666;
+}
+
+header .top-header .right-side {
+
+}
+
+header .top-header .right-side .social {
+	margin:  0;
+	padding:  0;
+	display: flex;
+}
+
+header .top-header .right-side .social li {
+	list-style: none;
+	border-right: 1px solid #eee;
+	padding: 10px;
+}
+
+header .top-header .right-side .social li:first-child {
+	border-left: 1px solid #eee;
+}
+
+header .top-header .right-side .social li a {
+	color:  #fff;
+	font-size: 14px;
+	padding: 2px;
+	background: #eee;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 300ms ease-in-out;
+}
+
+header .top-header .right-side .social li a:hover {
+	background:  #1ebe4f;
+	/*transform: rotate(360deg);*/
+	transform:  scale(1.2) rotate(360deg);
+	/*transform:  translateY(10px);*/
+	/*transform:  skewX(10deg);*/
+}
+
+header .bottom-header {
+	display: flex; 
+	align-items: center;
+	justify-content: space-between;
+	padding: 15px 30px;
+}
+
+header .bottom-header .left-side {
+	
+}
+
+header .bottom-header .left-side .logo {
+	max-width: 300px;
+}
+
+header .bottom-header .left-side .logo img {
+	width:  100%;
+}
+
+header .bottom-header .right-side {
+	width: 100%;
+	max-width: 500px;
+}
+
+header .bottom-header .right-side ul {
+	margin:  0;
+	padding:  0;
+	display:  flex;
+	justify-content: space-between;
+}
+
+header .bottom-header .right-side ul li {
+	list-style:  none;
+	/*margin: 0 10px;*/
+}
+
+header .bottom-header .right-side ul li a span {
+	z-index: 10;
+	position: relative;
+}
+
+
+header .bottom-header .right-side ul li a {
+	color:  #282828;
+	padding:  10px;
+	position: relative;
+	transition: all 300ms ease-in-out;
+	/*font-variant: small-caps;*/
+}
+
+header .bottom-header .right-side ul li a:hover {
+	color:  #fff;
+}
+
+header .bottom-header .right-side ul li a:after {
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 100%;
+	background: #1ebe4f;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transition: all 300ms ease-in-out;
+}
+
+header .bottom-header .right-side ul li a:hover:after {
+	width: 100%;
+}
+
+
+main #news {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 40px 50px;
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+main #news a {
+	display: block;
+	padding: 20px;
+}
+
+main #news a .image {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 200px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+main #news a .image img {
+	width: 100%;
+	transition: all 400ms ease-in-out;
+}
+
+main #news a:hover .image img {
+	transform: scale(1.2);
+}
+
+main #news a .content {
+	
+}
+
+main #news a .content .title {
+	font-size: 18px;
+	font-weight: 400;
+	color: #000;
+	transition: all 400ms ease-in-out;
+}
+
+main #news a:hover .content .title {
+	letter-spacing: 2px;
+}
+
+main #news a .content p {
+	font-size: 14px;
+	color: #282828;
+}
+
+main #news a .read-more {
+	font-size: 14px;
+	position: relative;
+	color: #282828;
+	transition: all 400ms ease-in-out;
+}
+
+main #news a:hover .read-more {
+	letter-spacing: 2px;
+}
+
+main #news a .read-more:before {
+	position: absolute;
+	content: '\f054';
+	top: 0;
+	right: -20px;
+	font-family: "Font Awesome\ 5 Free";
+	font-weight: 900;
+	transition: all 400ms ease-in-out;
+}
+
+main #news a:hover .read-more:before {
+	right: -30px;
+}
+
+#banner {
+	position: relative;
+}
+
+#banner .slide  {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 600px;
+	overflow: hidden;
+}
+
+#banner .slide img {
+	width: 100%;
+}
+
+#banner .arrow {
+
+}
+
+#banner .arrow .slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+#banner .arrow .slick-prev {
+	left: 30px;
+}
+
+#banner .arrow .slick-next {
+	right: 30px;
+}
+
+#banner .arrow .slick-arrow:before {
+	content: '\f054';
+	font-family: "Font Awesome\ 5 Free";
+	font-weight: 900;
+}
+
+#banner .arrow .slick-prev:before {
+	content: '\f053';
+}

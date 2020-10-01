@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>jQuery Toturial</title>
+	<script src="js/jquery-3.3.1.min.js"></script>
+
+</head>
+
+<style>
+
+h1, h3 {
+	text-transform: uppercase;
+}
+
+p {
+	font-family:  Arial;
+	font-size:  16px;
+	line-height: 20px;
+}
+
+a {
+	display:  block;
+}
+
+button {
+	font-size:  20px;
+}
+
+.header-h3 {
+	font-weight: bold;
+	font-size:  30px;
+	color:  #ff0000;
+}
+
+.image-1 {
+	width:  300px;
+	height:  auto;
+	display:  block;
+	margin-bottom:  20px;
+}
+
+
+
+</style>
+
+
+
+
+
+<body>
+	<h1>Lorem ipsum dolor</h1>
+	<h3 class="header">Consectetur adipisicing</h3>
+	<p class="paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos incidunt, odio laboriosam minima laborum optio maxime, enim tenetur provident amet repellendus ratione neque, quaerat omnis quam atque quae eligendi nihil!</p>
+	<a class="read-more" href="javascript:void(0)">Read More</a>
+	<a class="read-more" href="javascript:void(0)">Read More</a>
+	<a class="read-more" href="javascript:void(0)">Read More</a>
+	<br>
+	<img class="image-1" src="http://goo.gl/r9P8gd" alt="photo">
+	<button class="button-1">Click Me to change the H3 color</button>
+	<button class="button-2">Click Me to fade the image</button>
+	<button class="button-3">Click Me to slide the image</button>
+
+	<script>
+		$(document).ready(function() {
+			$('h1').css({
+				'font-size':'50px',
+				'font-weight':'bold',
+				'color':'#ff0000'
+			});
+			$('.header').addClass('new-header'); /* add new class to the element */
+			$('p').removeClass('paragraph'); /* remove new class to the element */
+			$('p').removeAttr('class'); /* remove an attribute for the element */
+			$('a').attr('title', 'Click Me!'); /* add a value to an attribute */
+
+
+			$('.read-more').click(function() {
+				$('h1').css({
+					'font-family': 'Tahoma',
+					'color': '#00ff00'
+				});
+				$(this).css('font-weight', 'bold');
+			});
+
+			$('.button-1').click(function() {
+				$('.header').toggleClass('header-h3');
+			});
+
+			$('.button-2').click(function() {
+				$('.image-1').fadeToggle(2000); /* Fade in and out */
+				/* $('.image-1').fadeIn(2000); Fade in */
+				/* $('.image-1').fadeOut(2000); Fade out */
+			});
+
+			$('.button-3').click(function() {
+				$('.image-1').slideToggle(2000); /* slide up and down */
+				/* $('.image-1').slideUp(2000); slide up */
+				/* $('.image-1').slideDown(2000); slide down */
+			});
+
+
+		});
+
+
+
+	</script>
+
+</body>
+</html>
